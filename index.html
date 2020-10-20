@@ -11,17 +11,14 @@
 		"bing": "https://www.bing.com/search",
 		"ask": "https://www.ask.com/web"
     	}
-   
-	 function setSearchEngine(){
-	 let form = document.getElementById("searchForm");    
-	 let searchEngine = document.querySelector("input[name=engine]:checked");
-	 let actionURL = actions["searchEngine.value"];
-	 form.setAttribute("action",actionURL);
-	 } 
 		
     window.addEventListener("load", function(event){
-	let form = document.getElementById("searchForm");    
-	form.addEventListener("submit", setSearchEngine());
+		let form = document.getElementById("searchForm");    
+		form.addEventListener("submit", setSearchEngine() {
+			let searchEngine = document.querySelector("input[name=engine]:checked");
+	 		let actionURL = actions["searchEngine.value"];
+	 		form.setAttribute("action",actionURL);			  
+		});
     });
 	</script>
 </head>
