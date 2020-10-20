@@ -13,13 +13,14 @@
      }
    
     function setSearchEngine(){
-	let actionURL = document.querySelector("input[name=engine]: checked");
-	return actions["actionURL"];
+	let  searchEngine = document.querySelector("input[name=engine]: checked").value;
+	let actionURL = actions["searchEngine"];
+	return actionURL;
     } 	
 		
     window.addEventListener("load", function(){
 	let form = document.GetElementbyId("searchform");
-	form.addEventListener("submit", setSearchEngine(event) {
+	form.addEventListener("submit", function(event) {
 		form.action.setAttribute = setSearchEngine();
     	}
     });
