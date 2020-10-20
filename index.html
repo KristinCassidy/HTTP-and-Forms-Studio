@@ -16,13 +16,13 @@
 	function setSearchEngine() {
 		let searchEngine = document.querySelector("input[name=engine]:checked");
 // 		let actionURL = actions["searchEngine.value"];
-			if (searchEngine.value === "google") {
+			if (searchEngine === "google") {
 				form.setAttribute( "action", "https://www.google.com/search");
-			} else if (searchEngine.value === "duckDuckGo") {
+			} else if (searchEngine === "duckDuckGo") {
 				form.setAttribute( "action", "https://duckduckgo.com/");
-			} else if (searchEngine.value === "bing") {
+			} else if (searchEngine === "bing") {
 				form.setAttribute( "action", "https://www.bing.com/search");
-			} else if (searchEngine.value === "ask") {
+			} else if (searchEngine === "ask") {
 				form.setAttribute( "action", "https://www.ask.com/web");
 			}
 	}
