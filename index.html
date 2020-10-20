@@ -5,21 +5,34 @@
 	<meta charset="utf-8">
 	<script>
 		// TODO: create a handler
-  	let actions = {
-		"google": "https://www.google.com/search",
-		"duckDuckGo": "https://duckduckgo.com/",
-		"bing": "https://www.bing.com/search",
-		"ask": "https://www.ask.com/web"
-    	}
+//   	let actions = {
+// 		"google": "https://www.google.com/search",
+// 		"duckDuckGo": "https://duckduckgo.com/",
+// 		"bing": "https://www.bing.com/search",
+// 		"ask": "https://www.ask.com/web"
+//     	}
 		
-    window.addEventListener("load", function(event){
+		
+	function setSearchEngine() {
+		let searchEngine = document.querySelector("input[name=engine]:checked");
+		let actionURL = actions["searchEngine.value"];
+			if (searchEngine.value === "google") {
+				form.setAttribute( "action", "https://www.google.com/search");
+			} else if (searchEngine.value === "duckDuckGo") {
+				form.setAttribute( "action", "https://duckduckgo.com/");
+			} else if (searchEngine.value === "bing") {
+				form.setAttribute( "action", "https://www.bing.com/search");
+			} else if (searchEngine.value === "ask") {
+				form.setAttribute( "action", "https://www.ask.com/web");
+			}
+	}
+		
+		
+    window.addEventListener("load", function(event) {
 		let form = document.getElementById("searchForm");    
-		form.addEventListener("submit", function(){
-			let searchEngine = document.querySelector("input[name=engine]:checked");
-	 		let actionURL = actions["searchEngine.value"];
-	 		form.setAttribute("action",actionURL);			  
-		});
+		form.addEventListener("submit", setSearchEngine());
     });
+		
 	</script>
 </head>
 
