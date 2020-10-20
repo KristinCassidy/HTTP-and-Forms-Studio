@@ -14,7 +14,8 @@
    
 	 function setSearchEngine(){
 	 let form = document.getElementById("searchForm");    
-	 let searchEngine = document.querySelector("input[name=engine]:checked").value;
+	 let selected = document.querySelector("input[name=engine]:checked");
+	 let searchEngine = selected.value;
 	 let actionURL = actions["searchEngine"];
 	 form.setAttribute("action", actionURL);
 	 } 
