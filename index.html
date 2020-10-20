@@ -5,18 +5,25 @@
 	<meta charset="utf-8">
 	<script>
 		// TODO: create a handler
-   let actions = {
-	"google": "https://www.google.com/search",
-	"duckDuckGo": "https://duckduckgo.com/",
-	"bing": "https://www.bing.com/search",
-	"ask": "https://www.ask.com/web"
-     }
+//    let actions = {
+// 	"google": "https://www.google.com/search",
+// 	"duckDuckGo": "https://duckduckgo.com/",
+// 	"bing": "https://www.bing.com/search",
+// 	"ask": "https://www.ask.com/web"
+//      }
    
-    function setSearchEngine(){
-	let  searchEngine = document.querySelector("input[name=engine]: checked").value;
-	let actionURL = actions[`${searchEngine}`];
-	return actionURL;
-    } 	
+      function setSearchEngine(){
+	 let searchEngine = document.querySelector("input[name=engine]: checked").value;
+         	if (searchEngine === "google") {
+           		return "https://www.google.com/search";
+          	} else if (searchEngine === "duckDuckGo") {
+            		return "https://duckduckgo.com/";
+          	} else if (searchEngine === "bing") {
+            		return "https://www.bing.com/search";
+          	}else if (searchEngine === "ask") {
+            		return "https://www.ask.com/web";
+          	}
+      }	
 		
     window.addEventListener("load", function(){
 	let form = document.getElementById("searchForm");
