@@ -14,7 +14,7 @@
 		
     window.addEventListener("load", function(event){
 		let form = document.getElementById("searchForm");    
-		form.addEventListener("submit", setSearchEngine() {
+		form.addEventListener("submit", function(){
 			let searchEngine = document.querySelector("input[name=engine]:checked");
 	 		let actionURL = actions["searchEngine.value"];
 	 		form.setAttribute("action",actionURL);			  
