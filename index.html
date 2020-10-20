@@ -15,14 +15,15 @@
 		
 	function setSearchEngine() {
 		let searchEngine = document.querySelector("input[name=engine]:checked");
-// 		let actionURL = actions["searchEngine.value"];
-			if (searchEngine === "google") {
+// 		let actionURL = actions["searchEngine.value"]
+		let value = searchEngine.getAttribute("value");
+			if (value === "google") {
 				form.setAttribute( "action", "https://www.google.com/search");
-			} else if (searchEngine === "duckDuckGo") {
+			} else if (value === "duckDuckGo") {
 				form.setAttribute( "action", "https://duckduckgo.com/");
-			} else if (searchEngine === "bing") {
+			} else if (value === "bing") {
 				form.setAttribute( "action", "https://www.bing.com/search");
-			} else if (searchEngine === "ask") {
+			} else if (value === "ask") {
 				form.setAttribute( "action", "https://www.ask.com/web");
 			}
 	}
